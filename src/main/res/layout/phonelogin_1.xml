@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:id="@+id/coordinatorLayout"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@color/design_fab_stroke_end_inner_color">
+
+        <ImageButton
+        android:id="@+id/btnlogin"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+            android:scaleType="fitCenter"
+        android:src="@drawable/tick_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/progressBar1"
+            android:background="@color/design_fab_stroke_end_inner_color" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/design_fab_stroke_end_inner_color"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/phone"
+        android:layout_toEndOf="@+id/phone" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/phonelogin1txt"
+        android:textSize="17sp" android:textColor="#212121" android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
+
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:ems="10"
+        android:hint="9012345678"
+        android:inputType="phone"
+        android:textColor="?attr/colorPrimary"
+        android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+
+        <ir.adad.client.Banner
+            android:id="@+id/banner_ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change country"
+            android:id="@+id/changecountry"
+            android:layout_above="@+id/banner_ad_view"
+            android:background="@color/design_fab_stroke_end_inner_color"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center" />
+    </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>

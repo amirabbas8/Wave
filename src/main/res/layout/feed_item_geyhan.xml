@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/rl2">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/relativelayout3"
+                android:layout_alignParentTop="true" android:weightSum="1"
+                android:layout_toLeftOf="@+id/like" android:layout_toStartOf="@+id/play">
+                <com.android.volley.toolbox.NetworkImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:id="@+id/profileimage" android:src="@drawable/ic_profile"
+                    android:scaleType="fitCenter" android:layout_alignParentTop="true"
+                     android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="{Name}"
+                    android:id="@+id/name" android:gravity="center_vertical"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/profileimage"/>
+            </RelativeLayout>
+        <android.support.design.widget.VisibilityAwareImageButton
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/play"
+                android:src="@drawable/play"
+                android:scaleType="fitCenter"
+
+                android:layout_alignParentBottom="false" android:layout_toStartOf="@+id/like"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="{N}"
+                android:id="@+id/nlike"
+                android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true" android:layout_alignParentBottom="false"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"/>
+        <android.support.design.widget.VisibilityAwareImageButton
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/like"
+                android:layout_toStartOf="@+id/nlike"
+                android:layout_alignParentTop="true" android:layout_alignParentBottom="false"
+                android:layout_toLeftOf="@+id/nlike" android:src="@drawable/add_icon"
+                android:scaleType="fitCenter"
+
+                android:layout_marginRight="10dp"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lprog"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/like" android:layout_alignBottom="@+id/like"
+            android:layout_alignEnd="@+id/like"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ll1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/rl2" />
+    </RelativeLayout>

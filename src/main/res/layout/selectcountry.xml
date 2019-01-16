@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:id="@+id/coordinatorLayout"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@color/design_fab_stroke_end_inner_color">
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/yuo"
+        android:id="@+id/policiesaccept"
+        android:textColor="@android:color/tertiary_text_light"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center" />
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/countryname"
+        android:text="@string/cyc"
+         android:background="@color/colorPrimaryDark" android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffff"
+         android:layout_centerVertical="true"
+         android:layout_alignParentStart="true"
+         android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/login"
+            android:id="@+id/login"
+            android:layout_below="@+id/countryname"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textView7"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@color/design_fab_stroke_end_inner_color"
+            android:layout_margin="5dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView7"
+            android:layout_alignTop="@+id/login"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/signup"
+            android:id="@+id/signup"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/countryname"
+            android:layout_toEndOf="@+id/textView7"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:background="@color/design_fab_stroke_end_inner_color"
+            android:layout_margin="5dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>

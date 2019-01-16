@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/design_fab_stroke_end_inner_color"
+    android:clickable="false">
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relativelayout2"
+        android:weightSum="1"
+        android:layout_below="@+id/iconad"
+        android:background="@color/accent_material_light">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/relativelayout4"
+                android:layout_alignParentTop="true" android:weightSum="1"
+                android:layout_toLeftOf="@+id/like" android:layout_toStartOf="@+id/like"
+                android:layout_alignParentBottom="true">
+                <com.android.volley.toolbox.NetworkImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/profileimage" android:src="@drawable/ic_profile"
+                    android:scaleType="fitCenter" android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="invisible" />
+
+                <android.support.design.widget.VisibilityAwareImageButton
+                    android:id="@+id/add"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:src="@drawable/add_icon"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignBottom="@+id/profileimage"
+                    android:layout_marginBottom="3dp"
+                    android:layout_alignLeft="@+id/profileimage"
+                    android:layout_alignRight="@+id/profileimage"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="{Name}"
+                    android:id="@+id/name" android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textSize="40sp" android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/profileimage"/>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aprog"
+                    android:layout_alignStart="@+id/add"
+                    android:layout_alignTop="@+id/add"
+                    android:layout_alignBottom="@+id/add"
+                    android:layout_alignEnd="@+id/add"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/delete" android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" android:layout_alignParentTop="true"
+                android:layout_alignParentStart="false" android:background="@color/colorAccent"
+                android:src="@drawable/delete_icon" android:scaleType="fitCenter"
+                android:visibility="invisible"/>
+            <TextView
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/nlike"
+                android:gravity="center_vertical"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true" android:textAlignment="center"
+                android:layout_alignParentBottom="true" />
+        <android.support.design.widget.VisibilityAwareImageButton
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/like"
+                android:layout_toStartOf="@+id/nlike"
+                android:layout_alignParentTop="false"
+                android:src="@drawable/feed_button_like"
+                android:scaleType="center"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/lprog"/>
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/lprog"
+                android:layout_alignParentTop="false"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/relativelayout4"
+                android:layout_above="@+id/nlike" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/iconad"
+        android:src="@drawable/station_pic1"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/textView"
+        android:background="#FF00B0FF"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/play"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:src="@drawable/play"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/play"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center_horizontal" />
+
+</RelativeLayout>

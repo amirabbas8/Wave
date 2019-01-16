@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_blue_light">
+
+    <net.saoshyant.wave.app.cropper.CropImageView
+        android:id="@+id/CropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:measureAllChildren="false"
+        android:scaleType="centerCrop"
+        android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+
+
+    <ImageButton
+        android:id="@+id/Button_cancell"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/CropImageView"
+        android:background="?attr/colorPrimary"
+        android:scaleType="centerCrop"
+        android:src="@drawable/prev_icon" />
+
+    <ImageButton
+        android:id="@+id/Button_crop"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/CropImageView"
+        android:background="?attr/colorPrimary"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yes_icon" />
+
+</RelativeLayout>
